@@ -5,7 +5,9 @@ We're going to install Docker on that instance where then going to download Ubun
 
 to make some modifications to it and then we're going to upload that image to the registry and then
 
-deploy a Fargate cluster and actually use our image and deploy a task using our Custom Image.1. ssh into the machine
+deploy a Fargate cluster and actually use our image and deploy a task using our Custom Image.
+
+1. ssh into the machine
 2. aws config - enter access key
                       - enter Secret Key
                       - default region name
@@ -15,8 +17,8 @@ deploy a Fargate cluster and actually use our image and deploy a task using our 
 5. sudo systemctl enable docker
 6. sudo usermod -a -G docker ec2-user
 7. sudo shutdown -r now (restart)
-8-ssh -i "jholderguru.pem" ec2-user@132.234.23.344
-9- docker info
+8. -ssh -i "jholderguru.pem" ec2-user@132.234.23.344
+9. - docker info
 10. touch Dockerfile(create the file)
 11. edit with nano >> nano Dockerfile
 
@@ -67,7 +69,7 @@ chmod 600 jholderguru.pem
                nano
                        >> (on your computer)open file and copy the .pem contents
                        >> save (as the same name from computer) and close
-18. docker tag jholderguru-container aws_account_id.dkr.ecr.region.amazonaws.com/jholderguru-ecr
+18. ```docker tag jholderguru-container aws_account_id.dkr.ecr.region.amazonaws.com/jholderguru-ecr```
 
 expected out put
 
